@@ -27,7 +27,7 @@ class LoginPage extends StatelessWidget {
                   padding: EdgeInsets.all(25.0),
                   child: Text('DRIVER'),
                 ),
-                onPressed: () => changeScreen(0),
+                onPressed: () => changeScreen(1),
               ),
             ],
           ),

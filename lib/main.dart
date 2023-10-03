@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tuktuk/driver.dart';
 import 'package:tuktuk/owner.dart';
 import 'package:tuktuk/screens/login.dart';
 
@@ -15,7 +16,10 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> {
   Widget? currentScreen;
-  final list = [const Owner()];
+  final list = [
+    const Owner(),
+    const ErickshawDashboardApp(),
+  ];
   void changeScreen(int i) {
     setState(() {
       currentScreen = list[i];
