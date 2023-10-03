@@ -20,7 +20,7 @@ class FleetScreen extends StatelessWidget {
             color = const Color.fromARGB(255, 247, 228, 58);
             batteryIcon = Icons.battery_5_bar;
           } else if (batteryPercent < 60 && batteryPercent > 40) {
-            color = Color.fromARGB(255, 245, 223, 24);
+            color = const Color.fromARGB(255, 245, 223, 24);
             batteryIcon = Icons.battery_4_bar;
           } else if (batteryPercent < 40 && batteryPercent > 20) {
             color = Colors.orange;
