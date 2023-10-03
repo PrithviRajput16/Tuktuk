@@ -6,7 +6,7 @@ class FleetScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final tList = FleetList;
+    final tList = fleetList;
     Color? color = Colors.red;
     var batteryIcon = Icons.battery_3_bar;
     return ListView.builder(

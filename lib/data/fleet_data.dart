@@ -1,4 +1,4 @@
-final FleetList = [
+final fleetList = [
   {
     'driver_alloted': 'Aryan Garg',
     'r_no': 'DL-AC-8Y-8008',
