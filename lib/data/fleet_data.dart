@@ -3,24 +3,30 @@ final FleetList = [
     'driver_alloted': 'Aryan Garg',
     'r_no': 'DL-AC-8Y-8008',
     'route': 'Model Town - Azadpur',
-    'battery': '35%'
+    'battery': 35
   },
   {
     'driver_alloted': 'Aryan Garg',
     'r_no': 'DL-AC-8Y-8008',
     'route': 'Model Town - Azadpur',
-    'battery': '35%'
+    'battery': 91
   },
   {
     'driver_alloted': 'Aryan Garg',
     'r_no': 'DL-AC-8Y-8008',
     'route': 'Model Town - Azadpur',
-    'battery': '35%'
+    'battery': 48
   },
   {
     'driver_alloted': 'Aryan Garg',
     'r_no': 'DL-AC-8Y-8008',
     'route': 'Model Town - Azadpur',
-    'battery': '35%'
+    'battery': 63
+  },
+  {
+    'driver_alloted': 'Aryan Garg',
+    'r_no': 'DL-AC-8Y-8008',
+    'route': 'Model Town - Azadpur',
+    'battery': 15
   },
 ];
