@@ -6,7 +6,7 @@ class DriverScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final dList = Drivers;
+    final dList = drivers;
     return ListView.builder(
         itemCount: dList.length,
         itemBuilder: (context, index) {
@@ -19,64 +19,113 @@ class DriverScreen extends StatelessWidget {
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Row(
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           const Text(
                             "Name: ",
+                            style: TextStyle(
+                              fontSize: 17,
+                            ),
                           ),
                           Text(
                             "${dList[index]['name']}",
                             style: const TextStyle(
                               fontWeight: FontWeight.bold,
-                             ),
-                          ),
-                        ],
-                      ),
-                      Row(
-                        children: [
-                          const Text("Amount Due: "),
-                          Text(
-                            "${dList[index]['amt']}",
-                            style: const TextStyle(
-                              fontWeight: FontWeight.bold,
+                              fontSize: 17,
                             ),
                           ),
                         ],
                       ),
-                      Row(
+                      const SizedBox(
+                        height: 10,
+                      ),
+                      // Row(
+                      //   children: [
+                      //     const Text(
+                      //       "Amount Due: ",
+                      //       style: TextStyle(
+                      //         fontSize: 17,
+                      //       ),
+                      //     ),
+                      //     Text(
+                      //       "${dList[index]['amt']}",
+                      //       style: const TextStyle(
+                      //         fontWeight: FontWeight.bold,
+                      //         fontSize: 17,
+                      //       ),
+                      //     ),
+                      //   ],
+                      // ),
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          const Text("Phone Number: "),
+                          const Text(
+                            "Number: ",
+                            style: TextStyle(
+                              fontSize: 17,
+                            ),
+                          ),
                           Text(
                             "${dList[index]['p_no']}",
                             style: const TextStyle(
                               fontWeight: FontWeight.bold,
+                              fontSize: 17,
                             ),
                           ),
                         ],
                       ),
+                      const SizedBox(
+                        height: 10,
+                      ),
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          const Text('Address: '),
+                          const Text(
+                            "License: ",
+                            style: TextStyle(
+                              fontSize: 17,
+                            ),
+                          ),
+                          Text(
+                            "${dList[index]['license']}",
+                            style: const TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 17,
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBox(
+                        height: 10,
+                      ),
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          const Text(
+                            'Address: ',
+                            style: TextStyle(
+                              fontSize: 17,
+                            ),
+                          ),
                           Text(
                             "${dList[index]['address']}",
-                            style: const TextStyle(fontWeight: FontWeight.bold),
+                            style: const TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 17,
+                            ),
                           )
                         ],
                       )
                     ],
                   ),
                   const Spacer(),
-                  Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text(
-                        "RS ${dList[index]['total_price']}",
-                        style: const TextStyle(
-                          fontWeight: FontWeight.bold,
-                        ),
-                      )
-                    ],
+                  ClipRRect(
+                    borderRadius: BorderRadius.circular(10),
+                    child: Image.asset(
+                      dList[index]['img'] as String,
+                      height: 180,
+                    ),
                   )
                 ],
               ),

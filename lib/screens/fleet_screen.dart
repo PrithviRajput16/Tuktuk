@@ -33,13 +33,14 @@ class FleetScreen extends StatelessWidget {
             elevation: 2,
             margin: const EdgeInsets.fromLTRB(20, 5, 20, 5),
             child: Padding(
-              padding: const EdgeInsets.all(8.0),
+              padding: const EdgeInsets.all(25.0),
               child: Row(
                 children: [
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Row(
+                        crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           const Text(
                             'Driver: ',
@@ -55,9 +56,10 @@ class FleetScreen extends StatelessWidget {
                         ],
                       ),
                       const SizedBox(
-                        height: 20,
+                        height: 10,
                       ),
                       Row(
+                        crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           const Text(
                             'R. No: ',
@@ -73,7 +75,8 @@ class FleetScreen extends StatelessWidget {
                       const SizedBox(
                         height: 10,
                       ),
-                      Row(
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           const Text(
                             'Route: ',
@@ -97,15 +100,15 @@ class FleetScreen extends StatelessWidget {
                   const Spacer(),
 
                   Column(
-                    crossAxisAlignment: CrossAxisAlignment.end,
+                    crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       Icon(
                         batteryIcon,
                         color: color,
-                        size: 60,
+                        size: 80,
                       ),
                       Text(
-                        '${tList[index]['battery']}',
+                        '${tList[index]['battery']}%',
                         style: const TextStyle(
                             fontWeight: FontWeight.bold, fontSize: 21),
                       ),
