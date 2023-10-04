@@ -18,6 +18,27 @@ class ErickshawDashboard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        actions: [
+          IconButton(
+              onPressed: () {
+                showDialog(
+                  context: context,
+                  builder: (context) {
+                    return AlertDialog(
+                      title:
+                          const Text('Connected To Aryan\'s \n E - Rickshaw'),
+                      actions: [
+                        ElevatedButton(
+                          onPressed: () => Navigator.pop(context),
+                          child: const Text('Ok'),
+                        ),
+                      ],
+                    );
+                  },
+                );
+              },
+              icon: const Icon(Icons.bluetooth_connected))
+        ],
         title: const Text('E-Rickshaw Dashboard'),
       ),
       body: const Center(
