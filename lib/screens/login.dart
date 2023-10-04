@@ -7,25 +7,44 @@ class LoginPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
+        backgroundColor: const Color.fromARGB(255, 5, 100, 9),
         body: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.white,
+                  ),
                   child: const Padding(
-                    padding: EdgeInsets.all(25.0),
-                    child: Text('OWNER'),
+                    padding: EdgeInsets.all(50.0),
+                    child: Text(
+                      'OWNER',
+                      style: TextStyle(
+                          color: Colors.green,
+                          fontSize: 22,
+                          fontWeight: FontWeight.bold),
+                    ),
                   ),
                   onPressed: () {
                     changeScreen(0);
                   }),
               const SizedBox(
-                height: 30,
+                height: 60,
               ),
               ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.white,
+                ),
                 child: const Padding(
-                  padding: EdgeInsets.all(25.0),
-                  child: Text('DRIVER'),
+                  padding: EdgeInsets.all(50.0),
+                  child: Text(
+                    'DRIVER',
+                    style: TextStyle(
+                        color: Colors.green,
+                        fontSize: 22,
+                        fontWeight: FontWeight.bold),
+                  ),
                 ),
                 onPressed: () => changeScreen(1),
               ),

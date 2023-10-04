@@ -29,6 +29,7 @@ class _OwnerState extends State<Owner> {
   @override
   Widget build(BuildContext context) {
     const double iconSize = 35;
+    Color color = Colors.white;
     return MaterialApp(
       title: 'Tuktuk',
       theme: ThemeData(
@@ -37,27 +38,36 @@ class _OwnerState extends State<Owner> {
       ),
       home: Scaffold(
         appBar: AppBar(
+          backgroundColor: const Color.fromARGB(255, 8, 95, 11),
           leading: IconButton(
             onPressed: () {},
-            icon: const Icon(
+            icon: Icon(
               Icons.account_circle_outlined,
               size: iconSize,
+              color: color,
             ),
           ),
-          title: const Text("Welcome Pranav"),
+          title: Text(
+            "Pranav's Fleet ",
+            style: TextStyle(
+              color: color,
+            ),
+          ),
           actions: [
             IconButton(
               onPressed: () {},
-              icon: const Icon(
+              icon: Icon(
                 Icons.notifications_none_sharp,
                 size: iconSize,
+                color: color,
               ),
             ),
             IconButton(
               onPressed: () {},
-              icon: const Icon(
+              icon: Icon(
                 Icons.settings,
                 size: iconSize,
+                color: color,
               ),
             ),
           ],
@@ -82,13 +92,13 @@ class _OwnerState extends State<Owner> {
               ),
               label: 'Drivers',
             ),
-            BottomNavigationBarItem(
-              icon: Icon(
-                Icons.swap_vert,
-                size: iconSize,
-              ),
-              label: 'Transaction',
-            ),
+            // BottomNavigationBarItem(
+            //   icon: Icon(
+            //     Icons.swap_vert,
+            //     size: iconSize,
+            //   ),
+            //   label: 'Transaction',
+            // ),
           ],
         ),
       ),

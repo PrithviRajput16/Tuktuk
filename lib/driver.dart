@@ -41,39 +41,52 @@ class ErickshawDashboard extends StatelessWidget {
         ],
         title: const Text('E-Rickshaw Dashboard'),
       ),
-      body: const Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Text(
-              'E-Rickshaw Stats',
-              style: TextStyle(
-                fontSize: 24,
-                fontWeight: FontWeight.bold,
+      body: Container(
+        decoration: const BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+            colors: [
+              Color.fromRGBO(4, 94, 7, 1),
+              Colors.white,
+              Colors.white,
+            ],
+          ),
+        ),
+        child: const Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Text(
+                'E-Rickshaw Stats',
+                style: TextStyle(
+                  fontSize: 24,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
-            ),
-            SizedBox(height: 20),
-            StatCard(
-              title: 'Battery Level',
-              value: '75%',
-              icon: Icons.battery_full,
-            ),
-            StatCard(
-              title: 'Speed',
-              value: '25 km/h',
-              icon: Icons.speed,
-            ),
-            StatCard(
-              title: 'Mileage',
-              value: '10 km/kWh',
-              icon: Icons.directions_car,
-            ),
-            StatCard(
-              title: 'Total Distance',
-              value: '500 km',
-              icon: Icons.location_on,
-            ),
-          ],
+              SizedBox(height: 20),
+              StatCard(
+                title: 'Battery Level',
+                value: '75%',
+                icon: Icons.battery_full,
+              ),
+              StatCard(
+                title: 'Speed',
+                value: '25 km/h',
+                icon: Icons.speed,
+              ),
+              StatCard(
+                title: 'Mileage',
+                value: '10 km/kWh',
+                icon: Icons.directions_car,
+              ),
+              StatCard(
+                title: 'Total Distance',
+                value: '500 km',
+                icon: Icons.location_on,
+              ),
+            ],
+          ),
         ),
       ),
     );
@@ -95,7 +108,7 @@ class StatCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Card(
       elevation: 4.0,
-      margin: const EdgeInsets.all(16.0),
+      // margin: const EdgeInsets.all(16.0),
       child: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(
