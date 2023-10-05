@@ -12,7 +12,7 @@ final rDetails = [
   },
   {
     'name': 'KM Remaining',
-    'value': '134 KM%',
+    'value': '134 KM',
     'icon': const Icon(
       Icons.mode_of_travel,
       size: 50,

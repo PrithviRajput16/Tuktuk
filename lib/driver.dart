@@ -55,47 +55,68 @@ class ErickshawDashboard extends StatelessWidget {
             ],
           ),
         ),
-        child: GridView.count(
-          crossAxisCount: 2,
-          children: List.generate(
-            growable: true,
-            rStats.length,
-            (index) {
-              return Padding(
-                padding: const EdgeInsets.all(1.0),
-                child: Card(
-                  color: Color.fromARGB(255, 238, 251, 237),
-                  margin: const EdgeInsets.all(25),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      rStats[index]['icon'] as Icon,
-                      const SizedBox(
-                        height: 15,
-                      ),
-                      Text(
-                        rStats[index]['name'].toString(),
-                        style: const TextStyle(
-                          fontSize: 18,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                      const SizedBox(
-                        height: 12,
-                      ),
-                      Text(
-                        rStats[index]['value'].toString(),
-                        style: const TextStyle(
-                            fontSize: 18,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.green),
-                      ),
-                    ],
+        child: Column(
+          children: [
+            Container(
+              height: 130,
+              width: double.infinity,
+              color: const Color.fromARGB(255, 10, 92, 13),
+              child: const Center(
+                child: Text(
+                  'Your Rickshaw Stats',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 22,
                   ),
                 ),
-              );
-            },
-          ),
+              ),
+            ),
+            Flexible(
+              child: GridView.count(
+                scrollDirection: Axis.vertical,
+                crossAxisCount: 2,
+                children: List.generate(
+                  growable: true,
+                  rStats.length,
+                  (index) {
+                    return Padding(
+                      padding: const EdgeInsets.all(1.0),
+                      child: Card(
+                        color: const Color.fromARGB(255, 238, 251, 237),
+                        margin: const EdgeInsets.all(18),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            rStats[index]['icon'] as Icon,
+                            const SizedBox(
+                              height: 15,
+                            ),
+                            Text(
+                              rStats[index]['name'].toString(),
+                              style: const TextStyle(
+                                fontSize: 18,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                            const SizedBox(
+                              height: 12,
+                            ),
+                            Text(
+                              rStats[index]['value'].toString(),
+                              style: const TextStyle(
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.green),
+                            ),
+                          ],
+                        ),
+                      ),
+                    );
+                  },
+                ),
+              ),
+            ),
+          ],
         ),
       ),
     );

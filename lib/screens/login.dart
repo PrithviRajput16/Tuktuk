@@ -33,9 +33,10 @@ class LoginPage extends StatelessWidget {
                     child: Text(
                       'RICKSHAW \n   OWNER',
                       style: TextStyle(
-                          color: Color.fromARGB(255, 5, 67, 7),
-                          fontSize: 30,
-                          fontWeight: FontWeight.bold),
+                        color: Color.fromARGB(255, 5, 67, 7),
+                        fontSize: 30,
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
                   ),
                   onPressed: () {

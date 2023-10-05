@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:tuktuk/driver.dart';
 import 'package:tuktuk/owner.dart';
+import 'package:tuktuk/screens/flash.dart';
 import 'package:tuktuk/screens/login.dart';
 
 void main() {
@@ -15,6 +16,12 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
+  void change() {
+    setState(() {
+      currentScreen = LoginPage(changeScreen: changeScreen);
+    });
+  }
+
   Widget? currentScreen;
   final list = [
     const Owner(),
@@ -28,10 +35,12 @@ class _MyAppState extends State<MyApp> {
 
   @override
   void initState() {
-    currentScreen = LoginPage(
-      changeScreen: changeScreen,
-    );
     super.initState();
+    // currentScreen = LoginPage(
+    //   changeScreen: changeScreen,
+    // );
+    // super.initState();
+    currentScreen = SplashScreen(change: change);
   }
 
   @override
