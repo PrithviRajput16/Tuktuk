@@ -10,16 +10,17 @@ class FleetScreen extends StatelessWidget {
     Color? color = Colors.red;
     var batteryIcon = Icons.battery_3_bar;
     return Container(
-      decoration: const BoxDecoration(
-        gradient: LinearGradient(
-          begin: Alignment.topCenter,
-          end: Alignment.bottomCenter,
-          colors: [
-            Color.fromRGBO(4, 94, 7, 1),
-            Colors.white,
-          ],
-        ),
-      ),
+      // decoration: const BoxDecoration(
+      //   gradient: LinearGradient(
+      //     begin: Alignment.topCenter,
+      //     end: Alignment.bottomCenter,
+      //     colors: [
+      //       Color.fromRGBO(4, 94, 7, 1),
+      //       Colors.white,
+      //     ],
+      //   ),
+      // ),
+      color: const Color.fromARGB(255, 47, 99, 50),
       child: ListView.builder(
           itemCount: tList.length,
           itemBuilder: (context, index) {
@@ -41,6 +42,7 @@ class FleetScreen extends StatelessWidget {
               batteryIcon = Icons.battery_1_bar;
             }
             return Card(
+              color: const Color.fromARGB(255, 219, 238, 215),
               elevation: 2,
               margin: const EdgeInsets.fromLTRB(20, 5, 20, 5),
               child: Padding(

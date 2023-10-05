@@ -9,19 +9,21 @@ class DriverScreen extends StatelessWidget {
     final dList = drivers;
     return Container(
       decoration: const BoxDecoration(
-        gradient: LinearGradient(
-          begin: Alignment.topCenter,
-          end: Alignment.bottomCenter,
-          colors: [
-            Color.fromRGBO(4, 94, 7, 1),
-            Colors.white,
-          ],
-        ),
+        // gradient: LinearGradient(
+        //   begin: Alignment.topCenter,
+        //   end: Alignment.bottomCenter,
+        //   colors: [
+        //     Color.fromRGBO(4, 94, 7, 1),
+        //     Colors.white,
+        //   ],
+        // ),
+        color: Color.fromARGB(255, 47, 99, 50),
       ),
       child: ListView.builder(
           itemCount: dList.length,
           itemBuilder: (context, index) {
             return Card(
+              color: const Color.fromARGB(255, 219, 238, 215),
               margin: const EdgeInsets.fromLTRB(20, 5, 20, 5),
               child: Padding(
                 padding: const EdgeInsets.all(20.0),
@@ -132,10 +134,11 @@ class DriverScreen extends StatelessWidget {
                     ),
                     const Spacer(),
                     ClipRRect(
-                      borderRadius: BorderRadius.circular(10),
+                      borderRadius: BorderRadius.circular(100),
                       child: Image.asset(
                         dList[index]['img'] as String,
                         height: 180,
+                        width: 130,
                       ),
                     )
                   ],

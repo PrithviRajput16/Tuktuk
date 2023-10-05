@@ -53,27 +53,28 @@ class _OwnerState extends State<Owner> {
               color: color,
             ),
           ),
-          actions: [
-            IconButton(
-              onPressed: () {},
-              icon: Icon(
-                Icons.notifications_none_sharp,
-                size: iconSize,
-                color: color,
-              ),
-            ),
-            IconButton(
-              onPressed: () {},
-              icon: Icon(
-                Icons.settings,
-                size: iconSize,
-                color: color,
-              ),
-            ),
-          ],
+          // actions: [
+          //   IconButton(
+          //     onPressed: () {},
+          //     icon: Icon(
+          //       Icons.notifications_none_sharp,
+          //       size: iconSize,
+          //       color: color,
+          //     ),
+          //   ),
+          //   IconButton(
+          //     onPressed: () {},
+          //     icon: Icon(
+          //       Icons.settings,
+          //       size: iconSize,
+          //       color: color,
+          //     ),
+          //   ),
+          // ],
         ),
         body: screen,
         bottomNavigationBar: BottomNavigationBar(
+          backgroundColor: Colors.lightGreen.shade50,
           showUnselectedLabels: false,
           onTap: onChange,
           currentIndex: currentIndex,

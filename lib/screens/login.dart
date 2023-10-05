@@ -7,22 +7,34 @@ class LoginPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        backgroundColor: const Color.fromARGB(255, 5, 100, 9),
+        backgroundColor: const Color.fromARGB(255, 47, 99, 50),
         body: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
+              Container(
+                decoration: const BoxDecoration(
+                  color: Color.fromARGB(255, 47, 99, 50),
+                ),
+                child: Image.asset(
+                  'assets/r3.png',
+                  width: 340,
+                ),
+              ),
+              const SizedBox(
+                height: 90,
+              ),
               ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.white,
+                    backgroundColor: const Color.fromARGB(255, 237, 244, 199),
                   ),
                   child: const Padding(
-                    padding: EdgeInsets.all(50.0),
+                    padding: EdgeInsets.all(30.0),
                     child: Text(
-                      'OWNER',
+                      'RICKSHAW \n   OWNER',
                       style: TextStyle(
-                          color: Colors.green,
-                          fontSize: 22,
+                          color: Color.fromARGB(255, 5, 67, 7),
+                          fontSize: 30,
                           fontWeight: FontWeight.bold),
                     ),
                   ),
@@ -30,19 +42,19 @@ class LoginPage extends StatelessWidget {
                     changeScreen(0);
                   }),
               const SizedBox(
-                height: 60,
+                height: 40,
               ),
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.white,
+                  backgroundColor: const Color.fromARGB(255, 237, 244, 199),
                 ),
                 child: const Padding(
-                  padding: EdgeInsets.all(50.0),
+                  padding: EdgeInsets.all(30.0),
                   child: Text(
-                    'DRIVER',
+                    'RICKSHAW \n   DRIVER',
                     style: TextStyle(
-                        color: Colors.green,
-                        fontSize: 22,
+                        color: Color.fromARGB(255, 5, 67, 7),
+                        fontSize: 30,
                         fontWeight: FontWeight.bold),
                   ),
                 ),

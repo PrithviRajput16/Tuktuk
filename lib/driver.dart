@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tuktuk/data/r_details.dart';
 
 class ErickshawDashboardApp extends StatelessWidget {
   const ErickshawDashboardApp({super.key});
@@ -16,8 +17,10 @@ class ErickshawDashboard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final rStats = rDetails;
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: const Color.fromARGB(255, 10, 92, 13),
         actions: [
           IconButton(
               onPressed: () {
@@ -49,93 +52,50 @@ class ErickshawDashboard extends StatelessWidget {
             colors: [
               Color.fromRGBO(4, 94, 7, 1),
               Colors.white,
-              Colors.white,
             ],
           ),
         ),
-        child: const Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              Text(
-                'E-Rickshaw Stats',
-                style: TextStyle(
-                  fontSize: 24,
-                  fontWeight: FontWeight.bold,
+        child: GridView.count(
+          crossAxisCount: 2,
+          children: List.generate(
+            growable: true,
+            rStats.length,
+            (index) {
+              return Padding(
+                padding: const EdgeInsets.all(1.0),
+                child: Card(
+                  color: Color.fromARGB(255, 238, 251, 237),
+                  margin: const EdgeInsets.all(25),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      rStats[index]['icon'] as Icon,
+                      const SizedBox(
+                        height: 15,
+                      ),
+                      Text(
+                        rStats[index]['name'].toString(),
+                        style: const TextStyle(
+                          fontSize: 18,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      const SizedBox(
+                        height: 12,
+                      ),
+                      Text(
+                        rStats[index]['value'].toString(),
+                        style: const TextStyle(
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.green),
+                      ),
+                    ],
+                  ),
                 ),
-              ),
-              SizedBox(height: 20),
-              StatCard(
-                title: 'Battery Level',
-                value: '75%',
-                icon: Icons.battery_full,
-              ),
-              StatCard(
-                title: 'Speed',
-                value: '25 km/h',
-                icon: Icons.speed,
-              ),
-              StatCard(
-                title: 'Mileage',
-                value: '10 km/kWh',
-                icon: Icons.directions_car,
-              ),
-              StatCard(
-                title: 'Total Distance',
-                value: '500 km',
-                icon: Icons.location_on,
-              ),
-            ],
+              );
+            },
           ),
-        ),
-      ),
-    );
-  }
-}
-
-class StatCard extends StatelessWidget {
-  final String title;
-  final String value;
-  final IconData icon;
-
-  const StatCard(
-      {super.key,
-      required this.title,
-      required this.value,
-      required this.icon});
-
-  @override
-  Widget build(BuildContext context) {
-    return Card(
-      elevation: 4.0,
-      // margin: const EdgeInsets.all(16.0),
-      child: Padding(
-        padding: const EdgeInsets.all(16.0),
-        child: Column(
-          children: <Widget>[
-            Icon(
-              icon,
-              size: 48,
-              color: Colors.blue,
-            ),
-            const SizedBox(height: 8),
-            Text(
-              title,
-              style: const TextStyle(
-                fontSize: 18,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-            const SizedBox(height: 4),
-            Text(
-              value,
-              style: const TextStyle(
-                fontSize: 24,
-                color: Colors.green,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-          ],
         ),
       ),
     );
