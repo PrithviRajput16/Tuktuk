@@ -1,10 +1,10 @@
 final drivers = [
   {
-    'name': 'Aryan Garg',
-    'p_no': '1234567834',
-    'address': 'Near Metro Pillar 34',
-    'license': '1234456',
-    'img': 'assets/d4.jpeg',
+    'name': 'Kaku Mohan',
+    'p_no': '987725XXXX',
+    'address': 'B 2/4 Janakpuri West',
+    'license': 'DL 04 CG2891',
+    'img': 'assets/real.jpeg',
     'day': '24',
   },
   {
@@ -12,7 +12,7 @@ final drivers = [
     'p_no': '1234567820',
     'address': 'Rajouri Garden',
     'license': '1234457',
-    'img': 'assets/d1.jpeg',
+    'img': 'assets/p.jpeg',
     'day': '24',
   },
   {
@@ -20,15 +20,7 @@ final drivers = [
     'p_no': '1234567811',
     'address': 'Subhash Nagar',
     'license': '1234458',
-    'img': 'assets/d2.jpeg',
-    'day': '24',
-  },
-  {
-    'name': 'Tonny Singh',
-    'p_no': '1234567819',
-    'address': 'Jankapuri West',
-    'license': '1234459',
-    'img': 'assets/d3.jpeg',
+    'img': 'assets/p.jpeg',
     'day': '24',
   },
 ];
