@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 final rDetails = [
   {
-    'name': 'Battery Level',
+    'name': 'Battery \n Level',
     'value': '75%',
     'icon': const Icon(
       Icons.battery_full,
@@ -11,7 +11,7 @@ final rDetails = [
     ),
   },
   {
-    'name': 'KM Remaining',
+    'name': 'KM \n Remaining',
     'value': '134 KM',
     'icon': const Icon(
       Icons.mode_of_travel,
@@ -20,7 +20,7 @@ final rDetails = [
     ),
   },
   {
-    'name': 'Distance Traveled',
+    'name': 'Distance \n Traveled',
     'value': '40 KM',
     'icon': const Icon(
       Icons.location_on,
@@ -29,7 +29,7 @@ final rDetails = [
     ),
   },
   {
-    'name': 'Battery Health',
+    'name': 'Battery \n Health',
     'value': '93%',
     'icon': const Icon(
       Icons.battery_unknown_sharp,
@@ -38,7 +38,7 @@ final rDetails = [
     ),
   },
   {
-    'name': 'Motor Temp',
+    'name': 'Motor \n Temp',
     'value': 'Normal`',
     'icon': const Icon(
       Icons.monitor_heart_rounded,
@@ -47,7 +47,7 @@ final rDetails = [
     ),
   },
   {
-    'name': 'Tyre Pressure',
+    'name': 'Tyre \n Pressure',
     'value': '30 PSI',
     'icon': const Icon(
       Icons.running_with_errors_outlined,

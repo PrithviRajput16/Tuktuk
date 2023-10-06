@@ -62,6 +62,9 @@ flutter:
     - assets/r.png
     - assets/r2.jpeg
     - assets/r3.png
+    - assets/bg.png
+    - assets/bg2.png
+    - assets/bgd.jpeg
     - assets/d1.jpeg
     - assets/d2.jpeg
     - assets/d3.jpeg

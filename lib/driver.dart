@@ -46,73 +46,86 @@ class ErickshawDashboard extends StatelessWidget {
       ),
       body: Container(
         decoration: const BoxDecoration(
-          gradient: LinearGradient(
-            begin: Alignment.topCenter,
-            end: Alignment.bottomCenter,
-            colors: [
-              Color.fromRGBO(4, 94, 7, 1),
-              Colors.white,
-            ],
+          color: Color.fromRGBO(13, 47, 47, 1),
+          image: DecorationImage(
+            image: AssetImage("assets/bg.png"),
+            fit: BoxFit.contain,
+            alignment: Alignment.topLeft,
           ),
         ),
+        // color: const Color.fromARGB(255, 7, 94, 10),
         child: Column(
           children: [
-            Container(
-              height: 130,
-              width: double.infinity,
-              color: const Color.fromARGB(255, 10, 92, 13),
-              child: const Center(
-                child: Text(
-                  'Your Rickshaw Stats',
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 22,
-                  ),
-                ),
-              ),
+            const SizedBox(
+              height: 250,
             ),
-            Flexible(
-              child: GridView.count(
-                scrollDirection: Axis.vertical,
-                crossAxisCount: 2,
-                children: List.generate(
-                  growable: true,
-                  rStats.length,
-                  (index) {
-                    return Padding(
-                      padding: const EdgeInsets.all(1.0),
-                      child: Card(
-                        color: const Color.fromARGB(255, 238, 251, 237),
-                        margin: const EdgeInsets.all(18),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            rStats[index]['icon'] as Icon,
-                            const SizedBox(
-                              height: 15,
-                            ),
-                            Text(
-                              rStats[index]['name'].toString(),
-                              style: const TextStyle(
-                                fontSize: 18,
-                                fontWeight: FontWeight.bold,
+            Expanded(
+              child: Container(
+                decoration: const BoxDecoration(
+                    color: Color.fromARGB(121, 236, 232, 236),
+                    borderRadius: BorderRadius.only(
+                        topLeft: Radius.circular(60),
+                        topRight: Radius.circular(60))),
+                child: Column(
+                  children: [
+                    const SizedBox(
+                      height: 40,
+                    ),
+                    Expanded(
+                      child: GridView.count(
+                        scrollDirection: Axis.vertical,
+                        crossAxisCount: 2,
+                        children: List.generate(
+                          growable: true,
+                          rStats.length,
+                          (index) {
+                            return Container(
+                              margin: const EdgeInsets.all(20),
+                              decoration: BoxDecoration(
+                                boxShadow: const [
+                                  BoxShadow(
+                                    color: Colors.black45,
+                                    blurRadius: 5,
+                                    // spreadRadius: 10,
+                                    offset: Offset(0, 10),
+                                  )
+                                ],
+                                color: const Color.fromARGB(255, 238, 251, 237),
+                                borderRadius: BorderRadius.circular(100),
                               ),
-                            ),
-                            const SizedBox(
-                              height: 12,
-                            ),
-                            Text(
-                              rStats[index]['value'].toString(),
-                              style: const TextStyle(
-                                  fontSize: 18,
-                                  fontWeight: FontWeight.bold,
-                                  color: Colors.green),
-                            ),
-                          ],
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  rStats[index]['icon'] as Icon,
+                                  const SizedBox(
+                                    height: 15,
+                                  ),
+                                  Text(
+                                    rStats[index]['name'].toString(),
+                                    textAlign: TextAlign.center,
+                                    style: const TextStyle(
+                                      fontSize: 18,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                  const SizedBox(
+                                    height: 12,
+                                  ),
+                                  Text(
+                                    rStats[index]['value'].toString(),
+                                    style: const TextStyle(
+                                        fontSize: 18,
+                                        fontWeight: FontWeight.bold,
+                                        color: Colors.green),
+                                  ),
+                                ],
+                              ),
+                            );
+                          },
                         ),
                       ),
-                    );
-                  },
+                    ),
+                  ],
                 ),
               ),
             ),
